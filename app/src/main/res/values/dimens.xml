@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="etUserNameMarginTop">150dp</dimen>
+    <dimen name="etUserNameMinHeight">48dp</dimen>
+    <dimen name="etNTriesMarginTop">48dp</dimen>
+    <dimen name="etNTriesMinHeight">48dp</dimen>
+    <dimen name="btStartGameMarginTop">60dp</dimen>
+    <dimen name="etGuessNumberMarginTop">100dp</dimen>
+    <dimen name="tvInfoNTriesMarginTop">80dp</dimen>
+    <dimen name="tvInfoNtriesTextSize">20sp</dimen>
+    <dimen name="tvInfoMoreLessMarginTop">100dp</dimen>
+    <dimen name="tvInfoMoreLessTextSize">20sp</dimen>
+    <dimen name="btTryAgainMarginTop">50dp</dimen>
+    <dimen name="etGuessNumberMinHeight">48dp</dimen>
+    <dimen name="btTryMarginTop">50dp</dimen>
+    <dimen name="tvWinLoseMarginTop">250dp</dimen>
+    <dimen name="tvWinLoseTextSize">35sp</dimen>
+    <dimen name="tvMessageMarginTop">330dp</dimen>
+    <dimen name="tvMessageTextSize">20sp</dimen>
+</resources>

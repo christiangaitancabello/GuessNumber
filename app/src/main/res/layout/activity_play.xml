@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.example.guessnumber.data.User" />
+        <variable
+            name="game"
+            type="com.example.guessnumber.data.Game" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".iu.PlayActivity">
+
+        <TextView
+            android:id="@+id/tvInfoNTries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tvInfoNTriesMarginTop"
+            android:gravity="center"
+            android:textSize="@dimen/tvInfoNtriesTextSize"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etGuessNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/etGuessNumberMarginTop"
+            android:autofillHints=""
+            android:hint="@string/etGuessNumberHint"
+            android:inputType="number"
+            android:minHeight="@dimen/etGuessNumberMinHeight"
+            android:textColorHint="#757575" />
+
+        <TextView
+            android:id="@+id/tvInfoMoreLess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tvInfoMoreLessMarginTop"
+            android:gravity="center"
+            android:textSize="@dimen/tvInfoMoreLessTextSize"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btTry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/btTryMarginTop"
+            android:text="@string/btTryText" />
+
+        <Button
+            android:id="@+id/btTryAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/btTryAgainMarginTop"
+            android:text="@string/btTryAgainText" />
+    </LinearLayout>
+</layout>

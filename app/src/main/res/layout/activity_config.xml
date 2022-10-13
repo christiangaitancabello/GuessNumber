@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.example.guessnumber.data.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".iu.ConfigActivity">
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/etUserNameMarginTop"
+            android:autofillHints=""
+            android:hint="@string/etUserNameHint"
+            android:inputType="text"
+            android:minHeight="@dimen/etUserNameMinHeight"
+            android:text="@={user.name}"
+            android:textColorHint="#757575" />
+
+        <EditText
+            android:id="@+id/etNTries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/etNTriesMarginTop"
+            android:autofillHints=""
+            android:hint="@string/etNTriesHint"
+            android:inputType="number"
+            android:minHeight="@dimen/etNTriesMinHeight"
+            android:text="@={user.ntries}"
+            android:textColorHint="#757575" />
+
+        <Button
+            android:id="@+id/btStartGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/btStartGameMarginTop"
+            android:text="@string/btStartGameText" />
+
+    </LinearLayout>
+</layout>

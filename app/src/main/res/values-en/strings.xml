@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GuessNumber</string>
+    <string name="etUserNameHint">Type the user name</string>
+    <string name="etNTriesHint">Number of tries</string>
+    <string name="btStartGameText">¡Play!</string>
+    <string name="etGuessNumberHint">Try a number</string>
+    <string name="btTryAgainText">Keep playing</string>
+    <string name="btTryText">Try</string>
+</resources>

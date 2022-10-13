@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GuessNumber</string>
+    <string name="etUserNameHint">Escribe el nombre de usuario</string>
+    <string name="etNTriesHint">Número de intentos</string>
+    <string name="btStartGameText">¡A jugar!</string>
+    <string name="etGuessNumberHint">Prueba un número</string>
+    <string name="btTryAgainText">Seguir jugando</string>
+    <string name="btTryText">Probar</string>
+</resources>

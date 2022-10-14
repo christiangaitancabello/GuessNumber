@@ -69,15 +69,20 @@ public class PlayActivity extends AppCompatActivity {
             return;
         }
 
-        binding.getGame().setnTries(binding.getGame().getnTries() + 1);
-        if (Integer.parseInt(binding.etGuessNumber.getText().toString()) > binding.getGame().getnToGuess()) {
-            binding.tvInfoMoreLess.setText("El número es menor");
-        } else if (Integer.parseInt(binding.etGuessNumber.getText().toString()) < binding.getGame().getnToGuess()) {
-            binding.tvInfoMoreLess.setText("El número es mayor");
-        } else {
-            binding.getGame().setWin(true);
-            EndGame();
+        try {
+            binding.getGame().setnTries(binding.getGame().getnTries() + 1);
+            if (Integer.parseInt(binding.etGuessNumber.getText().toString()) > binding.getGame().getnToGuess()) {
+                binding.tvInfoMoreLess.setText("El número es menor");
+            } else if (Integer.parseInt(binding.etGuessNumber.getText().toString()) < binding.getGame().getnToGuess()) {
+                binding.tvInfoMoreLess.setText("El número es mayor");
+            } else {
+                binding.getGame().setWin(true);
+                EndGame();
+            }
+        } catch (Exception e) {
+            binding.getGame().setnTries(binding.getGame().getnTries() - 1);
         }
+
 
         UpdateInfoTries();
         binding.etGuessNumber.setEnabled(false);
@@ -96,6 +101,9 @@ public class PlayActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
 
         bundle.putParcelable("game", binding.getGame());
+
+        // Para volver a la primera Activity
+        //.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 
         Intent intent = new Intent(this, EndGameActivity.class);
         intent.putExtras(bundle);

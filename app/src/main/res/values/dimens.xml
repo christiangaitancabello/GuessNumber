@@ -17,4 +17,5 @@
     <dimen name="tvWinLoseTextSize">35sp</dimen>
     <dimen name="tvMessageMarginTop">330dp</dimen>
     <dimen name="tvMessageTextSize">20sp</dimen>
+    <dimen name="btnPlayAgainMarginTop">410dp</dimen>
 </resources>

@@ -6,8 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.guessnumber.data.Game;
-import com.example.guessnumber.data.User;
+import com.example.guessnumber.GuessNumberApplication;
 import com.example.guessnumber.R;
 import com.example.guessnumber.databinding.ActivityConfigBinding;
 
@@ -35,15 +34,19 @@ public class ConfigActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.btStartGame.setOnClickListener(view -> StartGame());
-        binding.setUser(new User());
+        binding.setUser((((GuessNumberApplication)getApplication()).getUser()));
     }
 
     /**
      * Método que se llama cuando se pulsa sobre el botón btStartGame definido en el XML.
      */
     private void StartGame() {
-        if (binding.getUser().getName() == null || binding.getUser().getName().isEmpty() || binding.getUser().getNtries() == null  || binding.getUser().getNtries().isEmpty() || Integer.parseInt(binding.getUser().getNtries()) < 0) {
-            Toast.makeText(this, "Introduzca nombre de usuario y número de intentos válido", Toast.LENGTH_SHORT).show();
+        try {
+            if (binding.getUser().getName() == null || binding.getUser().getName().isEmpty() || binding.getUser().getNtries() == null  || binding.getUser().getNtries().isEmpty() || Integer.parseInt(binding.getUser().getNtries()) < 0) {
+                throw new Exception();
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, getResources().getString(R.string.IntroduceValidUser), Toast.LENGTH_SHORT).show();
             return;
         }
 

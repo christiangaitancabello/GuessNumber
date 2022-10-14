@@ -6,4 +6,12 @@
     <string name="etGuessNumberHint">Prueba un número</string>
     <string name="btTryAgainText">Seguir jugando</string>
     <string name="btTryText">Probar</string>
+    <string name="btnPlayAgainText">Jugar de nuevo</string>
+    <string name="IntroduceValidUser">Introduzca nombre de usuario y número de intentos válido</string>
+    <string name="DefaultUser">Jugador</string>
+    <string name="DefaultNtries" translatable="false">10</string>
+    <string name="VictoryTitle">VICTORIA</string>
+    <string name="VictoryMessage">Intentos para adivinar: </string>
+    <string name="LoseTitle">DERROTA</string>
+    <string name="LoseMessage">El número era:</string>
 </resources>

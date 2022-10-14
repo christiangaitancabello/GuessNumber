@@ -3,8 +3,8 @@ package com.example.guessnumber.iu;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.example.guessnumber.R;
 import com.example.guessnumber.databinding.ActivityEndGameBinding;
@@ -13,14 +13,11 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import nl.dionsegijn.konfetti.core.Party;
 import nl.dionsegijn.konfetti.core.PartyFactory;
 import nl.dionsegijn.konfetti.core.Position;
 import nl.dionsegijn.konfetti.core.emitter.Emitter;
 import nl.dionsegijn.konfetti.core.emitter.EmitterConfig;
 import nl.dionsegijn.konfetti.core.models.Shape;
-import nl.dionsegijn.konfetti.core.models.Size;
-import nl.dionsegijn.konfetti.xml.KonfettiView;
 
 /**
  * Clase donde se muestra el resultado del juego.
@@ -36,6 +33,7 @@ public class EndGameActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         Bundle bundle = getIntent().getExtras();
+        binding.btnPlayAgain.setOnClickListener(view -> PlayAgain());
 
         binding.setGame(bundle.getParcelable("game"));
         ShowResult();
@@ -48,15 +46,21 @@ public class EndGameActivity extends AppCompatActivity {
         if (binding.getGame().getWin()) {
             binding.konfettiView.setOnClickListener(view -> explode());
             binding.tvWinLose.setTextColor(ContextCompat.getColor(this, R.color.green));
-            binding.tvWinLose.setText("VICTORIA");
-            binding.tvMessage.setText("Has acertado en: " + binding.getGame().getnTries() + " intentos");
+            binding.tvWinLose.setText(getResources().getString(R.string.VictoryTitle));
+            binding.tvMessage.setText(getResources().getString(R.string.VictoryMessage) + " " + binding.getGame().getnTries());
 
         }
         else {
             binding.tvWinLose.setTextColor(ContextCompat.getColor(this, R.color.red));
-            binding.tvWinLose.setText("DERROTA");
-            binding.tvMessage.setText("El número era: " + binding.getGame().getnToGuess());
+            binding.tvWinLose.setText(getResources().getString(R.string.LoseTitle));
+            binding.tvMessage.setText(getResources().getString(R.string.LoseMessage) + " " + binding.getGame().getnToGuess());
         }
+    }
+
+    private void PlayAgain() {
+        Intent intent = new Intent(this, ConfigActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        startActivity(intent);
     }
 
     /**

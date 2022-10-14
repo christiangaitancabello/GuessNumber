@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -8,7 +9,7 @@
             type="com.example.guessnumber.data.Game" />
     </data>
 
-    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -27,8 +28,8 @@
             android:id="@+id/tvWinLose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tvWinLoseMarginTop"
             android:gravity="center"
+            android:layout_marginTop="@dimen/tvWinLoseMarginTop"
             android:textSize="@dimen/tvWinLoseTextSize"
             android:textStyle="bold" />
 
@@ -36,9 +37,17 @@
             android:id="@+id/tvMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tvMessageMarginTop"
             android:gravity="center"
+            android:layout_marginTop="@dimen/tvMessageMarginTop"
             android:textSize="@dimen/tvMessageTextSize"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnPlayAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnPlayAgainText"
+            android:layout_marginTop="@dimen/btnPlayAgainMarginTop"
+            android:layout_centerHorizontal="true"/>
     </RelativeLayout>
 </layout>

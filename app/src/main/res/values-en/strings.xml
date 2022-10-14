@@ -7,4 +7,11 @@
     <string name="etGuessNumberHint">Try a number</string>
     <string name="btTryAgainText">Keep playing</string>
     <string name="btTryText">Try</string>
+    <string name="IntroduceValidUser">Introduce a valid user name and number of tries</string>
+    <string name="btnPlayAgainText">Play again</string>
+    <string name="DefaultUser">Jugador</string>
+    <string name="VictoryTitle">WIN</string>
+    <string name="VictoryMessage">Attempts to guess: </string>
+    <string name="LoseTitle">LOSE</string>
+    <string name="LoseMessage">The number was:</string>
 </resources>

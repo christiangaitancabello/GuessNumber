@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.guessnumber.R;
 import com.example.guessnumber.data.Game;
 import com.example.guessnumber.databinding.ActivityPlayBinding;
 
@@ -65,16 +66,16 @@ public class PlayActivity extends AppCompatActivity {
      */
     private void GuessTry() {
         if (binding.etGuessNumber.getText().toString().equals("")) {
-            Toast.makeText(this, "Se debe introducir un número", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.NeedNumberMessage), Toast.LENGTH_SHORT).show();
             return;
         }
 
         try {
             binding.getGame().setnTries(binding.getGame().getnTries() + 1);
             if (Integer.parseInt(binding.etGuessNumber.getText().toString()) > binding.getGame().getnToGuess()) {
-                binding.tvInfoMoreLess.setText("El número es menor");
+                binding.tvInfoMoreLess.setText(getResources().getString(R.string.LowerNumberMessage));
             } else if (Integer.parseInt(binding.etGuessNumber.getText().toString()) < binding.getGame().getnToGuess()) {
-                binding.tvInfoMoreLess.setText("El número es mayor");
+                binding.tvInfoMoreLess.setText(getResources().getString(R.string.BiggerNumberMessage));
             } else {
                 binding.getGame().setWin(true);
                 EndGame();

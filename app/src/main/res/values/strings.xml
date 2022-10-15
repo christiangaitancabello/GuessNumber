@@ -10,6 +10,9 @@
     <string name="IntroduceValidUser">Introduzca nombre de usuario y número de intentos válido</string>
     <string name="DefaultUser">Jugador</string>
     <string name="DefaultNtries" translatable="false">10</string>
+    <string name="NeedNumberMessage">Se debe introducir un número</string>
+    <string name="BiggerNumberMessage">El número es mayor</string>
+    <string name="LowerNumberMessage">El número es menor</string>
     <string name="VictoryTitle">VICTORIA</string>
     <string name="VictoryMessage">Intentos para adivinar: </string>
     <string name="LoseTitle">DERROTA</string>
